@@ -1,0 +1,8 @@
+@use "../../styles/colors";
+
+.login-form{
+    display:flex;
+}
+.button{
+    background-color: colors.$primary_main;
+}
