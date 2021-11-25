@@ -1,8 +1,11 @@
 @use "../../styles/colors";
 
 .login-form{
-    display:flex;
+    width: 220px;
+    padding: 10px;
+    display:block;
 }
 .button{
+    width:100%;
     background-color: colors.$primary_main;
 }
