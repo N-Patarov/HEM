@@ -1,11 +1,10 @@
 import Paper from "@mui/material/Paper";
 import Container from "@mui/material/Container";
-import Link from "../../src/components/link/Link";
 import styles from "./LoginPage.module.scss";
 import classNames from "classnames";
 import Login from "../../src/components/login/Login";
  
-export default function Copyright() {
+export default function LoginPage() {
   return (
     <div className={classNames(styles.wrapper)}>
       <Container className={classNames(styles.container)}>
