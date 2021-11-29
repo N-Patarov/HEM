@@ -1,6 +1,8 @@
 import Example from "../src/components/example/Example";
 import Login from "../src/components/login/Login";
-import Weather from "../src/components/weather/Weather";
+import LoginPage from "./login/index";
+
 export default function Index() {
-  return <Weather />;
+  return <LoginPage />;
+
 }
