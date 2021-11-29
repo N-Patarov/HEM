@@ -9,13 +9,16 @@ import LoginPage from "./login/index";
 export default function Index() {
   return <Header
     left={
-      <User />
+      <div className="left-container">
+        <User />
+      </div>
     }
     right={
-      <div>
+      <div className="right-container">
         <Time />
         <Weather />
       </div>
-    } />;
+    }
+  />;
 
 }
