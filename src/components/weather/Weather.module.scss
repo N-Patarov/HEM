@@ -1,10 +1,17 @@
 @use "../../styles/colors";
 .weather-wrapper{
+    display: flex;
+}
+.image{
+    width: 70px;
+}
+.text-wrapper{
     display: block;
 }
 .weather{
+    font-size:60px;
     color:colors.$primary_main;
 }
 .deg{
-    font-size:40px;
+    font-size:60px;
 }
