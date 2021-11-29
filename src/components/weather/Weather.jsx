@@ -22,7 +22,7 @@ export default function Weather({degrees,type=""}){
             <div>{<img className={styles['image']} src = {source} />}</div>
             <div className={styles['text-wrapper']}>
                 <Typography className={styles['weather']}>weather</Typography>
-                <Typography variant={<h1 />} className={styles['deg']}>{degrees}</Typography>
+                <Typography variant={<h1 />} className={styles['deg']}>{degrees}&deg;</Typography>
             </div>
         </div>
     );
