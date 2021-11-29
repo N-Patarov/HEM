@@ -1,0 +1,10 @@
+@use "../../styles/colors";
+.weather-wrapper{
+    display: block;
+}
+.weather{
+    color:colors.$primary_main;
+}
+.deg{
+    font-size:40px;
+}
