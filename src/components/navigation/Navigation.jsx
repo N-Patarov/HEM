@@ -1,24 +1,13 @@
-import Drawer from "@mui/material/Drawer";
-import List from "@mui/material/List";
-import IconButton from "@mui/material/IconButton";
-import Menu from "@mui/material/Menu";
-import ListItem from "@mui/material/ListItem";
-import MenuItem from "@mui/material/MenuItem";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import Badge from "@mui/material/Badge";
-import ListItemText from "@mui/material/ListItemText";
+import {
+  Drawer, List, IconButton, Menu, ListItem, MenuItem, ListItemIcon,
+  Badge, ListItemText, Toolbar, Divider
+} from "@mui/material/";
+
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import BedOutlinedIcon from "@mui/icons-material/BedOutlined";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import User from "../user/User";
-
 import * as React from 'react';
-import Toolbar from "@mui/material/Toolbar";
-import Divider from '@mui/material/Divider';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
-
-import Container from "@mui/material/Container";
 import styles from "./Navigation.module.scss";
 import classNames from "classnames";
 
@@ -41,7 +30,7 @@ export default function Navigation() {
 
   return (
     <div className={classNames(styles.wrapper)}>
-      <Drawer
+      <Drawer className={classNames(styles.drawer)}
         sx={{
           width: '245px',
           flexShrink: 0,
@@ -57,7 +46,7 @@ export default function Navigation() {
 
         <Toolbar className={classNames(styles.toolbar)}>
 
-          <User avatar="images/avatar.png" name="John Doe" size='55px' headingSize='h5'/>
+          <User avatar="images/avatar.png" name="John Doe" size='55px' headingSize='h5' />
 
           <IconButton
             aria-label="more"
@@ -95,23 +84,24 @@ export default function Navigation() {
         </Toolbar>
 
 
-        <Divider />
+        {/* <Divider /> */}
         <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+          {['Apartment', 'Living Room', 'Bedroom', 'Bathroom', 'Toilet', 'Patio'].map((text, index) => (
             <ListItem button key={text}>
               <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                {index === 0 ? <HomeOutlinedIcon /> : <BedOutlinedIcon />}
               </ListItemIcon>
               <ListItemText primary={text} />
+              <Badge color="secondary" badgeContent={1} ></Badge> {/*warning*/}
             </ListItem>
           ))}
         </List>
-        <Divider />
+        {/* <Divider /> */}
         <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
+          {['Apartment', 'Living Room', 'Bedroom 1', 'Bedroom 2', 'Bedroom 3', 'Bathroom ', 'Toilet', 'Patio'].map((text, index) => (
             <ListItem button key={text}>
               <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                {index === 0 ? <HomeOutlinedIcon /> : <BedOutlinedIcon />}
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItem>
