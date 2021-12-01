@@ -55,9 +55,9 @@ export default function Navigation() {
       >
 
 
-        <Toolbar >
+        <Toolbar className={classNames(styles.toolbar)}>
 
-          <User avatar="images/avatar.png" name="John Doe" />
+          <User avatar="images/avatar.png" name="John Doe" size='55px' headingSize='h5'/>
 
           <IconButton
             aria-label="more"
