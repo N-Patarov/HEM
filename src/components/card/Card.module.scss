@@ -1,0 +1,14 @@
+@use "../../styles/colors";
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 183px;
+    width: 243px;
+    background-color: #{colors.$primary_main}#{20};
+}
