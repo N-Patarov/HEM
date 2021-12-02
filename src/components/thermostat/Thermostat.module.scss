@@ -1,0 +1,22 @@
+.wrapper{
+    display: block;
+    width: 700px;
+    justify-content: space-between;
+    align-items: center;
+}
+.graph{
+    background-color: lightgrey;
+    position: relative;
+    width: 100%;
+}
+.container{
+    position: absolute;
+    width: 100%;
+}
+.thermo-wrapper{
+    display: flex;
+    justify-content: center; 
+}
+.thermo{
+    display: block;
+}
