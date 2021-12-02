@@ -2,6 +2,7 @@ import { CircularProgress, Typography } from '@mui/material';
 import { AddCircleOutlined, RemoveCircleOutlined } from '@mui/icons-material';
 import {Line, ComposedChart, XAxis, YAxis, CartesianGrid, LineChart, ResponsiveContainer, Tooltip } from 'recharts';
 import styles from './Thermostat.module.scss';
+import {useState} from 'react';
 export default function Thermostat(
     {data=[
     { temperature: 25, hour: 12 },
@@ -11,15 +12,17 @@ export default function Thermostat(
     { temperature: 15, hour: 16 },
     { temperature: 10, hour: 17 },
   ]}){
+    const [progress, setProgress] = useState();
+    const [deg, setDeg] = useState(25);
     return(
         <div className={styles['wrapper']}>
             <div className={styles['thermo-wrapper']}>
                 <div className={styles['thermo']}>
-                    <CircularProgress variant="determinate" value={100}/>
+                    <CircularProgress variant="determinate" value={deg}/>
                     <div>
-                        <RemoveCircleOutlined />
-                        <Typography variant={<h1 />} className={styles['deg']}>{25}&deg;</Typography>
-                        <AddCircleOutlined />
+                        <button onClick={() => setDeg(deg - 1)}><RemoveCircleOutlined /></button>
+                        <Typography variant={<h1 />} className={styles['deg']}>{deg}&deg;</Typography>
+                        <button onClick={() => setDeg(deg + 1)}><AddCircleOutlined /></button>
                     </div>
                 </div>
             </div>
