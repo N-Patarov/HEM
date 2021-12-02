@@ -18,8 +18,11 @@ export default function Thermostat(
         <div className={styles['wrapper']}>
             <div className={styles['thermo-wrapper']}>
                 <div className={styles['thermo']}>
-                    <CircularProgress variant="determinate" value={deg}/>
-                    <div>
+                    <div className={styles['circles']}>
+                        <CircularProgress style={{transform: "rotate(-180deg)",color:"#FFFFFF", width:"200px", height:"200px"}} variant="determinate" value={deg}/>
+                        <CircularProgress style={{transform: "rotate(-90deg)",color:"#00000033", width:"200px", height:"200px"}} variant="determinate" value={100}/>
+                    </div>
+                    <div className={styles['test1']}>
                         <button onClick={() => setDeg(deg - 1)}><RemoveCircleOutlined /></button>
                         <Typography variant={<h1 />} className={styles['deg']}>{deg}&deg;</Typography>
                         <button onClick={() => setDeg(deg + 1)}><AddCircleOutlined /></button>
@@ -31,8 +34,8 @@ export default function Thermostat(
                 <div style={{fontSize: "12px", paddingTop:"10px", paddingLeft:"10px"}}>TEMPERATURE GRAPH</div>
                 <ResponsiveContainer width="100%" height={150}>
                     <ComposedChart width={500} height={300} data={data}>
-                        <Tooltip contentStyle={{ backgroundColor: "#8884d8", color: "#fff" }} itemStyle={{ color: "#fff" }} cursor={false}/>
-                        <Line type="monotone" dataKey="temperature" stroke="#8884d8" strokeWidth="5"/>
+                        <Tooltip contentStyle={{ backgroundColor: "#8884d8", color: "#FFFFFF" }} itemStyle={{ color: "#fff" }} cursor={false}/>
+                        <Line type="monotone" dataKey="temperature" stroke="#FFFFFF" strokeWidth="5"/>
                     </ComposedChart>
                 </ResponsiveContainer>
             </div>
