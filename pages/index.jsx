@@ -6,8 +6,8 @@ import Weather from "../src/components/weather/Weather";
 import Time from "../src/components/time/Time";
 import LoginPage from "./login/index";
 import Navigation from "../src/components/navigation/Navigation";
-
+import Thermostat from "../src/components/thermostat/Thermostat";
 export default function Index() {
-  return <Navigation/>;
+  return <Thermostat/>;
 
 }
