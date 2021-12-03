@@ -1,0 +1,66 @@
+.wrapper{
+    display: block;
+    width: 700px;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    background: linear-gradient(284.07deg, #EC6953 0%, #DF53A8 100%);
+    border-radius: 20px;
+}
+.graph{
+    background-color: #FFFFFF;
+    bottom: 0px;
+    height: 200px;
+    position: absolute;
+    width: 100%;
+    background: linear-gradient(284.07deg, #e06755 0%, #d65294 100%);
+    backdrop-filter: blur(22px);
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 0px 0px 15px 15px;
+    opacity: 1;
+}
+.thermo-wrapper{
+    width: 700px;
+    height: 400px;
+    position: relative;
+    display: flex;
+    justify-content: center; 
+}
+.circles{
+    position: absolute;
+    display: block;
+    justify-content: space-around;
+}
+.white-circle{
+    width: 433.87px;
+    height: 433.87px;
+    left: 4.12px;
+    top: 0px;
+    position: absolute;
+}
+.black-circle{
+    position: relative;
+    width: 433.87px;
+    height: 433.87px;
+    left: 4.12px;
+    top: 0px;
+}
+.degrees-wrapper{
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    position: absolute;
+    top: 100px;
+}
+.buttons{
+    background-color: #CE5181;
+    height: 50%;
+    border-radius:50%;
+}
+.deg{
+    color: #FFFFFF;
+}
+.icons{
+    transform: scale(2);
+    color: #FFFFFF;
+}
