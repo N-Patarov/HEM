@@ -17,14 +17,14 @@ export default function Thermostat(
     return(
         <div className={styles['wrapper']}>
             <div className={styles['thermo-wrapper']}>
-                <div className={styles['thermo']}>
+                <div className={styles['circles']}>
                     <CircularProgress className={styles['white-circle']} style={{transform: "rotate(-180deg)",color:"#FFFFFF"}} variant="determinate"  value={deg} size={400}/>
                     <CircularProgress className={styles['black-circle']} style={{transform: "rotate(-90deg)",color:"#00000033"}} variant="determinate" value={100} size={400}/>
                 </div>
-                <div className={styles['degrees']}>
-                    <button onClick={() => setDeg(deg - 1)}><RemoveCircleOutlined /></button>
+                <div className={styles['degrees-wrapper']}>
+                    <button className={styles['buttons']} onClick={() => setDeg(deg - 1)}><RemoveCircleOutlined className={styles['icons']} /></button>
                     <Typography variant='h1' fontSize={80} className={styles['deg']}>{deg}&deg;</Typography>
-                    <button onClick={() => setDeg(deg + 1)}><AddCircleOutlined /></button>
+                    <button className={styles['buttons']} onClick={() => setDeg(deg + 1)}><AddCircleOutlined className={styles['icons']} /></button>
                 </div>
             </div>
             <div className={styles['graph']}>

@@ -8,7 +8,7 @@
     border-radius: 20px;
 }
 .graph{
-    background-color: lightgrey;
+    background-color: #FFFFFF;
     bottom: 0px;
     height: 200px;
     position: absolute;
@@ -26,7 +26,7 @@
     display: flex;
     justify-content: center; 
 }
-.thermo{
+.circles{
     position: absolute;
     display: block;
     justify-content: space-around;
@@ -45,10 +45,22 @@
     left: 4.12px;
     top: 0px;
 }
-.degrees{
+.degrees-wrapper{
+    align-items: center;
     justify-content: space-between;
-    color: #FFFFFF;
     display: flex;
     position: absolute;
-    top:100px;
+    top: 100px;
+}
+.buttons{
+    background-color: #CE5181;
+    height: 50%;
+    border-radius:50%;
+}
+.deg{
+    color: #FFFFFF;
+}
+.icons{
+    transform: scale(2);
+    color: #FFFFFF;
 }
