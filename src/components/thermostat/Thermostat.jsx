@@ -1,4 +1,4 @@
-import { CircularProgress, Typography } from '@mui/material';
+import { CircularProgress, Typography, Button} from '@mui/material';
 import { AddCircleOutlined, RemoveCircleOutlined } from '@mui/icons-material';
 import {Line, ComposedChart, XAxis, YAxis, CartesianGrid, LineChart, ResponsiveContainer, Tooltip } from 'recharts';
 import styles from './Thermostat.module.scss';
@@ -22,9 +22,9 @@ export default function Thermostat(
                     <CircularProgress className={styles['black-circle']} style={{transform: "rotate(-90deg)",color:"#00000033"}} variant="determinate" value={100} size={400}/>
                 </div>
                 <div className={styles['degrees-wrapper']}>
-                    <button className={styles['buttons']} onClick={() => setDeg(deg - 1)}><RemoveCircleOutlined className={styles['icons']} /></button>
+                    <Button className={styles['buttons']} onClick={() => setDeg(deg - 1)}><RemoveCircleOutlined className={styles['icons']} /></Button>
                     <Typography variant='h1' fontSize={80} className={styles['deg']}>{deg}&deg;</Typography>
-                    <button className={styles['buttons']} onClick={() => setDeg(deg + 1)}><AddCircleOutlined className={styles['icons']} /></button>
+                    <Button className={styles['buttons']} onClick={() => setDeg(deg + 1)}><AddCircleOutlined className={styles['icons']} /></Button>
                 </div>
             </div>
             <div className={styles['graph']}>

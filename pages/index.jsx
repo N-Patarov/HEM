@@ -8,6 +8,7 @@ import LoginPage from "./login/index";
 import Navigation from "../src/components/navigation/Navigation";
 import Card from "../src/components/card/Card";
 import Scenes from "../src/components/scenes/Scenes";
+import Thermostat from "../src/components/thermostat/Thermostat";
 
 const cardsData=[
   {
