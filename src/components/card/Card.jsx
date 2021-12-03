@@ -1,7 +1,7 @@
 import { Card as MuiCard, CardContent, ButtonBase } from "@mui/material"
 import style from "./Card.module.scss"
 import classNames from "classnames"
-export default function Card({ iconUrl = false, outlined = false }) {
+export default function Card({ iconUrl = false, outlined = false, onClick }) {
     return (
         <div className={classNames(style.card)}>
             <MuiCard sx={(outlined) ? {
@@ -9,7 +9,7 @@ export default function Card({ iconUrl = false, outlined = false }) {
                 boxSizing: "border-box",
                 borderRadius: "20px"
             } : ""}>
-                <ButtonBase>
+                <ButtonBase onClick={onClick}>
                     <CardContent className={classNames(style.content)}>
                         {(iconUrl) ? <img src={iconUrl}></img> : ""}
                     </CardContent>
