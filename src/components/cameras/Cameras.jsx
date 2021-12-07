@@ -26,7 +26,7 @@ export default function Cameras({ cameras, hasButton }) {
                         borderRadius: '20px',
                     }} autoPlay muted />
                 </Grid>
-                <Grid item container xs={2} spacing={1} direction="column" >
+                <Grid item container={(hasButton) ? true : false} xs={2} spacing={1} direction="column" >
                     <Grid item>
                         <Box sx={{ maxHeight: '300px', overflow: "auto", }}>
                             <Grid container spacing={1}>
