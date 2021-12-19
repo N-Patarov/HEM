@@ -1,4 +1,4 @@
-import {Line, ComposedChart, XAxis, CartesianGrid, LineChart, ResponsiveContainer } from 'recharts';
+import {Line, ComposedChart, XAxis, CartesianGrid, LineChart, ResponsiveContainer, Area, linearGradient } from 'recharts';
 import { Grid, Select, MenuItem, Typography, InputLabel, FormControl } from '@mui/material';
 import styles from './Energy.module.scss';
 export default function Energy(
@@ -15,7 +15,7 @@ export default function Energy(
 ){
     return(
         <Grid className={styles['wrapper']}>
-            <div className={styles['head']}>
+            <Grid className={styles['head']}>
                 <Typography fontSize={22} fontWeight='bold' className={styles['text']}>Energy</Typography>
                 <Select
                     labelId="demo-simple-select-label"
@@ -29,10 +29,14 @@ export default function Energy(
                     <MenuItem value={20}>This Month</MenuItem>
                     <MenuItem value={30}>This Year</MenuItem>
                 </Select>
-            </div>
+            </Grid>
             <div className={styles['line']}>
+            <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8}/>
+                <stop offset="95%" stopColor="#82ca9d" stopOpacity={0}/>
+            </linearGradient>
                 <ComposedChart width={500} height={300} data={data}>
-                    <Line className={styles['line']} type="monotone" dataKey="energy" stroke='#DF54A7' strokeWidth="5"/> 
+                    <Area className={styles['line']} type="monotone" dataKey="energy" stroke='#DF54A7' strokeWidth="5" fill="url(#colorPv)"/> 
                     <XAxis dataKey="hour" />
                     <CartesianGrid horizontal={false} />
                 </ComposedChart>

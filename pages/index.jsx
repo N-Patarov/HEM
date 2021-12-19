@@ -40,5 +40,5 @@ const cardsData=[
 ];
 
 export default function Index() {
-  return <Scenes cards={cardsData}/>;
+  return <Energy />;
 }
