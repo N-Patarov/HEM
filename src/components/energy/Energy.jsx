@@ -36,7 +36,8 @@ export default function Energy(
                 <stop offset="95%" stopColor="#82ca9d" stopOpacity={0}/>
             </linearGradient>
                 <ComposedChart width={500} height={300} data={data}>
-                    <Area className={styles['line']} type="monotone" dataKey="energy" stroke='#DF54A7' strokeWidth="5" fill="url(#colorPv)"/> 
+                    <Line className={styles['line']} type="monotone" dataKey="energy" stroke='#DF54A7' strokeWidth="5" fill="url(#colorPv)"/>
+                    <Area type="monotone" dataKey="energy" stroke='#DF54A7' strokeWidth="5" fill="url(#colorPv)"/>  
                     <XAxis dataKey="hour" />
                     <CartesianGrid horizontal={false} />
                 </ComposedChart>
